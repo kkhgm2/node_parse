@@ -19,7 +19,7 @@ app.post('/', function(req, res, next) {
 
     if(req.is('application/json')){
         console.log(req.body)
-        res.send(req.body)
+        res.status(201).send(req.body)
     }else {
         res.status(400).send('Bad Request')
     }
